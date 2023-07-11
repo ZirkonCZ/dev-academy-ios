@@ -10,6 +10,8 @@ struct ContentView: View {
             Text("My name is.. (what?)")
             Text("My name is.. (who?)")
             Text("My name is ...")
+            Text("rikejmitato")
+            Text("jk, I'm Zirkon, pleased to meet you.")
         }
         .padding()
     }
