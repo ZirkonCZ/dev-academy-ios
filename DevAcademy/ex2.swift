@@ -25,14 +25,12 @@ enum Kind: String {
 }
 
 enum PossibleKind: RawRepresentable {
-    var rawValue: String { // read-only
-        get {
-            switch self {
-                case .kind (let x):
-                    return x.rawValue
-                case .unknown (let string):
-                    return string
-            }
+    var rawValue: String { // read-only - "get" doesn't have to be explicit
+        switch self {
+            case .kind (let x):
+                return x.rawValue
+            case .unknown (let string):
+                return string
         }
     }
     
@@ -58,8 +56,8 @@ struct Properties {
 }
 
 struct Point {
-    let latitude: Float
-    let longitude: Float
+    let latitude: Double
+    let longitude: Double
 }
 
 struct Feature {
@@ -79,17 +77,37 @@ class DataService {
     func fetchData(clsr: (Result<Features, Error>?) -> Void) {
         if data != nil {
             clsr(data)
+            return
         }
-        // X = 10 s
-        Timer.scheduledTimer(withTimeInterval: 10, repeats: false,
-                             block: {[weak self] _ in let res = Result<Features, Error>.success(DataService.mockData)
-            self?.data = res
-            clsr(res)
-        })
+
+        Timer.scheduledTimer(
+            withTimeInterval: 10,
+            repeats: false,
+            block: {
+                [weak self] _ in
+                    let res = Result<Features, Error>.success(DataService.mockData)
+                    self?.data = res
+                    clsr(res)
+            }
+        )
     }
 }
 
 extension DataService{
-    private static var mockData: Features = Features(features: [Feature(geometry: Point(latitude: <#T##Float#>, longitude: <#T##Float#>), properties: Properties(ogcFid: <#T##Int#>, obrId1: <#T##URL#>, druh: PossibleKind(rawValue: <#T##String#>) ?? <#default value#>, nazev: <#T##String#>))])
-
+    private static var mockData: Features = Features(
+        features: [
+            Feature(
+                geometry: Point(
+                    latitude: 0,
+                    longitude: 0
+                ),
+                properties: Properties(
+                    ogcFid: 1,
+                    obrId1: /,
+                    druh: PossibleKind(rawValue: "hub") ?? PossibleKind(rawValue: "unknown_val"),
+                    nazev: "EpicHub"
+                )
+            )
+        ]
+    )
 }
