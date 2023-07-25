@@ -103,8 +103,8 @@ extension DataService{
                 ),
                 properties: Properties(
                     ogcFid: 1,
-                    obrId1: /,
-                    druh: PossibleKind(rawValue: "hub") ?? PossibleKind(rawValue: "unknown_val"),
+                    obrId1: URL(string: "https://picsum.photos/200")!,
+                    druh: PossibleKind.kind(.hub),
                     nazev: "EpicHub"
                 )
             )
