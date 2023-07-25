@@ -8,15 +8,15 @@ struct PlacesRowLive: View {
             AsyncImage(url: feature.properties.obrId1) {
                 image in
                 image
-                    .frame(width: 60, height: 60)
                     .resizable()
+                    .frame(width: 60, height: 60)
                     .aspectRatio(contentMode: .fill)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .shadow(radius: 4)
             } placeholder: {
-                EmptyView()
+                ProgressView()
             }
-            VStack(alignment: .leading)) {
+            VStack(alignment: .leading) {
                 Text(feature.properties.nazev)
                     .font(.title2)
                     .fontWeight(.semibold)

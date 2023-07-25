@@ -1,3 +1,5 @@
+import Foundation
+
 extension Features {
     static let mock: Features = Features(
         features: [

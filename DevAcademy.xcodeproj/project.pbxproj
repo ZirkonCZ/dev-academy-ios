@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3E6235C2A7005B100CC66D4 /* DevAcademy in Resources */ = {isa = PBXBuildFile; fileRef = A3E6235B2A7005B100CC66D4 /* DevAcademy */; };
+		A3D688AA2A700E620092A172 /* DevAcademy in Resources */ = {isa = PBXBuildFile; fileRef = A3D688A92A700E620092A172 /* DevAcademy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A3E6235B2A7005B100CC66D4 /* DevAcademy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DevAcademy; sourceTree = "<group>"; };
+		A3D688A92A700E620092A172 /* DevAcademy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DevAcademy; sourceTree = "<group>"; };
 		C05610452A5C78CA007FB970 /* DevAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -29,7 +29,7 @@
 		C056103C2A5C78CA007FB970 = {
 			isa = PBXGroup;
 			children = (
-				A3E6235B2A7005B100CC66D4 /* DevAcademy */,
+				A3D688A92A700E620092A172 /* DevAcademy */,
 				C05610462A5C78CA007FB970 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E6235C2A7005B100CC66D4 /* DevAcademy in Resources */,
+				A3D688AA2A700E620092A172 /* DevAcademy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

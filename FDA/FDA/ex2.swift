@@ -60,7 +60,11 @@ struct Point {
     let longitude: Double
 }
 
-struct Feature {
+struct Feature: Equatable {
+    static func == (lhs: Feature, rhs: Feature) -> Bool {
+        lhs.properties.ogcFid == rhs.properties.ogcFid
+    }
+    
     let geometry: Point
     let properties: Properties
 }
@@ -71,11 +75,11 @@ struct Features {
 
 class DataService {
     private init() {}
-    var shared: DataService = DataService.init()
+    static var shared: DataService = DataService.init()
     var data: Result<Features, Error>?
 
-    func fetchData(clsr: (Result<Features, Error>?) -> Void) {
-        if data != nil {
+    func fetchData(clsr: @escaping (Result<Features, Error>) -> Void) {
+        if let data {
             clsr(data)
             return
         }
@@ -85,29 +89,10 @@ class DataService {
             repeats: false,
             block: {
                 [weak self] _ in
-                    let res = Result<Features, Error>.success(DataService.mockData)
+                    let res = Result<Features, Error>.success(Features.mock)
                     self?.data = res
                     clsr(res)
             }
         )
     }
-}
-
-extension DataService{
-    private static var mockData: Features = Features(
-        features: [
-            Feature(
-                geometry: Point(
-                    latitude: 0,
-                    longitude: 0
-                ),
-                properties: Properties(
-                    ogcFid: 1,
-                    obrId1: URL(string: "https://picsum.photos/200")!,
-                    druh: PossibleKind.kind(.hub),
-                    nazev: "EpicHub"
-                )
-            )
-        ]
-    )
 }
