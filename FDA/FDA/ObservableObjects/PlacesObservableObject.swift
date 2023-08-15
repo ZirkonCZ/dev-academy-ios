@@ -9,16 +9,27 @@ import SwiftUI
 
 
 final class PlacesObservableObject: ObservableObject {
+    init(placesService: PlacesService) {
+        self.placesService = placesService
+    }
+
     @Published var places: [Place] = []
+    let placesService: PlacesService
     
-    func fetch() {
-        DataService.shared.fetchData { result in
-            switch result {
-            case .success(let places):
-                self.places = places.places
-            case .failure(let error):
-                print(error)
-            }
+    @MainActor
+    func fetch() async {
+        do {
+            places = try await placesService.placesWithAsync().places
+        } catch {
+            print("error during fetching data:\n", error)
         }
+//        DataService.shared.fetchData { result in
+//            switch result {
+//            case .success(let places):
+//                self.places = places.places
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 } 

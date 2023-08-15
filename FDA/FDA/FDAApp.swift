@@ -12,7 +12,7 @@ struct FDAApp: App {
     var body: some Scene {
         WindowGroup {
             RootView() // idk
-                .environmentObject(PlacesObservableObject())
+                .environmentObject(PlacesObservableObject(placesService: ProductionPlacesServices()))
                 .environmentObject(Coordinator())
         }
     }

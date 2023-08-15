@@ -32,6 +32,7 @@
 		A3C402B02A8B7DA600AC9E06 /* PlacesViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C402AE2A8B7DA600AC9E06 /* PlacesViewState.swift */; };
 		A3C402B22A8B968900AC9E06 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C402B12A8B968900AC9E06 /* Service.swift */; };
 		A3C402B52A8B9B6400AC9E06 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = A3C402B42A8B9B6400AC9E06 /* ActivityIndicatorView */; };
+		A3C402B72A8BBAA200AC9E06 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C402B62A8BBAA200AC9E06 /* PlacesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		A3C402AD2A8B7DA600AC9E06 /* PlacesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 		A3C402AE2A8B7DA600AC9E06 /* PlacesViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewState.swift; sourceTree = "<group>"; };
 		A3C402B12A8B968900AC9E06 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A3C402B62A8BBAA200AC9E06 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				A3C402762A8B703400AC9E06 /* DataService.swift */,
 				A3C402B12A8B968900AC9E06 /* Service.swift */,
+				A3C402B62A8BBAA200AC9E06 /* PlacesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				A3C402A82A8B703400AC9E06 /* Point.swift in Sources */,
 				A3C402B22A8B968900AC9E06 /* Service.swift in Sources */,
 				A3C4029F2A8B703400AC9E06 /* ObservableObjects.swift in Sources */,
+				A3C402B72A8BBAA200AC9E06 /* PlacesService.swift in Sources */,
 				A3C402A72A8B703400AC9E06 /* Kind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

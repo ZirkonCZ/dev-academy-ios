@@ -17,7 +17,7 @@ struct PlaceDetailViewState: DynamicProperty {
     var druh: String {
         place.properties.druh.rawValue
     }
-    var obrId1: URL {
+    var obrId1: URL? {
         place.properties.obrId1
     }
     var nazev: String {

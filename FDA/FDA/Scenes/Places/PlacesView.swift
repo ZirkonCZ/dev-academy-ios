@@ -29,7 +29,9 @@ struct PlacesView: View {
                 }
             }
         }
-        .onAppear(perform: viewState.fetchPlaces)
+        .task({
+            await viewState.fetchPlacesWithAsync()
+        })
         .sheet(isPresented: viewState.$showFavorites) {
             coordinator.showFavorites()
         }

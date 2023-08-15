@@ -1,7 +1,11 @@
 import Foundation
 
-struct Places {
+struct Places: Decodable {
     var places: [Place]
+
+    enum CodingKeys: String, CodingKey {
+        case places = "features"
+    }
 }
 
 extension Places {
