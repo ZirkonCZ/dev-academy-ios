@@ -39,7 +39,7 @@
 		A352905D2A70101600C00013 /* FDAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDAApp.swift; sourceTree = "<group>"; };
 		A35290612A70101A00C00013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35290642A70101A00C00013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A3C4025A2A8B6F9E00AC9E06 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = FDA/RootView.swift; sourceTree = "<group>"; };
+		A3C4025A2A8B6F9E00AC9E06 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A3C402762A8B703400AC9E06 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A3C402802A8B703400AC9E06 /* PlaceDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		A3C402812A8B703400AC9E06 /* PlaceDetailViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewState.swift; sourceTree = "<group>"; };
@@ -77,7 +77,6 @@
 		A35290512A70101600C00013 = {
 			isa = PBXGroup;
 			children = (
-				A3C4025A2A8B6F9E00AC9E06 /* RootView.swift */,
 				A352905C2A70101600C00013 /* FDA */,
 				A352905B2A70101600C00013 /* Products */,
 			);
@@ -101,6 +100,7 @@
 				A3C402772A8B703400AC9E06 /* Scenes */,
 				A3C402752A8B703400AC9E06 /* Services */,
 				A352905D2A70101600C00013 /* FDAApp.swift */,
+				A3C4025A2A8B6F9E00AC9E06 /* RootView.swift */,
 				A35290612A70101A00C00013 /* Assets.xcassets */,
 				A35290632A70101A00C00013 /* Preview Content */,
 			);

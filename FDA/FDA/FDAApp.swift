@@ -12,6 +12,8 @@ struct FDAApp: App {
     var body: some Scene {
         WindowGroup {
             RootView() // idk
+                .environmentObject(PlacesObservableObject())
+                .environmentObject(Coordinator())
         }
     }
 }
