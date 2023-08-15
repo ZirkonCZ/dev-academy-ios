@@ -11,7 +11,7 @@ import SwiftUI
 struct FDAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView() // idk
         }
     }
 }

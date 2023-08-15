@@ -1,20 +1,20 @@
 import SwiftUI
 
 struct PlacesSceneLive: View {
-    @State var features: [Feature] = []
+    @State var places: [Places] = [] // singular?
     
     var body: some View {
         NavigationStack {
             Group {
-                if !features.isEmpty {
-                    List(features, id: \.properties.ogcFid) {
-                        feature in
-                        PlacesRowLive(feature: feature)
+                if !places.isEmpty {
+                    List(places, id: \.properties.ogcFid) {
+                        place in
+                        PlacesRowLive(place: place)
                             .onTapGesture {
-                                tapped(on: feature)
+                                tapped(on: place)
                             }
                     }
-                    .animation(.default, value: features)
+                    .animation(.default, value: places)
                     .listStyle(.plain)
                 } else {
                     ProgressView()
@@ -25,15 +25,15 @@ struct PlacesSceneLive: View {
         .onAppear(perform: fetch)
     }
     
-    func tapped(on feature: Feature) {
-        features.removeAll(where: { $0.properties.ogcFid == feature.properties.ogcFid })
+    func tapped(on place: Place) {
+        places.removeAll(where: { $0.properties.ogcFid == place.properties.ogcFid })
     }
     
     func fetch() {
         DataService.shared.fetchData { result in
             switch result {
-            case .success(let features):
-                self.features = features.features
+            case .success(let places):
+                self.places = places.places
             case .failure(let error):
                 print(error)
             }
