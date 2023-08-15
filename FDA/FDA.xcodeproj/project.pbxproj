@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A352905E2A70101600C00013 /* FDAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352905D2A70101600C00013 /* FDAApp.swift */; };
-		A35290602A70101600C00013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352905F2A70101600C00013 /* ContentView.swift */; };
+		A31063C52A86130E0044EF54 /* PlacesSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290912A70122A00C00013 /* PlacesSceneState.swift */; };
+		A31063C62A86130E0044EF54 /* PlacesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290922A70122A00C00013 /* PlacesRow.swift */; };
+		A31063C72A86130E0044EF54 /* PlacesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290932A70122A00C00013 /* PlacesScene.swift */; };
+		A31063C82A86130E0044EF54 /* PlacesSceneLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290952A70122A00C00013 /* PlacesSceneLive.swift */; };
+		A31063C92A86130E0044EF54 /* PlacesRowLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290962A70122A00C00013 /* PlacesRowLive.swift */; };
+		A31063CA2A86130E0044EF54 /* ex2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290892A7010FB00C00013 /* ex2.swift */; };
+		A31063CB2A86130E0044EF54 /* FDAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352905D2A70101600C00013 /* FDAApp.swift */; };
+		A31063CC2A86130E0044EF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352905F2A70101600C00013 /* ContentView.swift */; };
 		A35290622A70101A00C00013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35290612A70101A00C00013 /* Assets.xcassets */; };
 		A35290652A70101A00C00013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35290642A70101A00C00013 /* Preview Assets.xcassets */; };
-		A352908D2A7010FB00C00013 /* ex2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290892A7010FB00C00013 /* ex2.swift */; };
-		A35290992A70122A00C00013 /* PlacesSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290912A70122A00C00013 /* PlacesSceneState.swift */; };
-		A352909A2A70122A00C00013 /* PlacesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290922A70122A00C00013 /* PlacesRow.swift */; };
-		A352909B2A70122A00C00013 /* PlacesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290932A70122A00C00013 /* PlacesScene.swift */; };
-		A352909C2A70122A00C00013 /* PlacesSceneLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290952A70122A00C00013 /* PlacesSceneLive.swift */; };
-		A352909D2A70122A00C00013 /* PlacesRowLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290962A70122A00C00013 /* PlacesRowLive.swift */; };
-		A352909E2A70122A00C00013 /* mockFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35290982A70122A00C00013 /* mockFeatures.swift */; };
+		A3C4023C2A8B6D6E00AC9E06 /* mockFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4023B2A8B6D6E00AC9E06 /* mockFeatures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		A35290932A70122A00C00013 /* PlacesScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesScene.swift; sourceTree = "<group>"; };
 		A35290952A70122A00C00013 /* PlacesSceneLive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesSceneLive.swift; sourceTree = "<group>"; };
 		A35290962A70122A00C00013 /* PlacesRowLive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesRowLive.swift; sourceTree = "<group>"; };
-		A35290982A70122A00C00013 /* mockFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mockFeatures.swift; sourceTree = "<group>"; };
+		A3C4023B2A8B6D6E00AC9E06 /* mockFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockFeatures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		A35290972A70122A00C00013 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A35290982A70122A00C00013 /* mockFeatures.swift */,
+				A3C4023B2A8B6D6E00AC9E06 /* mockFeatures.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A352907E2A70101A00C00013 /* Build configuration list for PBXNativeTarget "FDA" */;
 			buildPhases = (
-				A35290562A70101600C00013 /* Sources */,
 				A35290572A70101600C00013 /* Frameworks */,
 				A35290582A70101600C00013 /* Resources */,
+				A310639E2A8611E30044EF54 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -186,19 +186,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A35290562A70101600C00013 /* Sources */ = {
+		A310639E2A8611E30044EF54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A35290602A70101600C00013 /* ContentView.swift in Sources */,
-				A352909B2A70122A00C00013 /* PlacesScene.swift in Sources */,
-				A35290992A70122A00C00013 /* PlacesSceneState.swift in Sources */,
-				A352905E2A70101600C00013 /* FDAApp.swift in Sources */,
-				A352909A2A70122A00C00013 /* PlacesRow.swift in Sources */,
-				A352909D2A70122A00C00013 /* PlacesRowLive.swift in Sources */,
-				A352909C2A70122A00C00013 /* PlacesSceneLive.swift in Sources */,
-				A352909E2A70122A00C00013 /* mockFeatures.swift in Sources */,
-				A352908D2A7010FB00C00013 /* ex2.swift in Sources */,
+				A31063C52A86130E0044EF54 /* PlacesSceneState.swift in Sources */,
+				A31063C62A86130E0044EF54 /* PlacesRow.swift in Sources */,
+				A31063C72A86130E0044EF54 /* PlacesScene.swift in Sources */,
+				A31063C82A86130E0044EF54 /* PlacesSceneLive.swift in Sources */,
+				A31063C92A86130E0044EF54 /* PlacesRowLive.swift in Sources */,
+				A31063CA2A86130E0044EF54 /* ex2.swift in Sources */,
+				A3C4023C2A8B6D6E00AC9E06 /* mockFeatures.swift in Sources */,
+				A31063CB2A86130E0044EF54 /* FDAApp.swift in Sources */,
+				A31063CC2A86130E0044EF54 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
