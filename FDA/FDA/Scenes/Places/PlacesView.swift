@@ -29,9 +29,9 @@ struct PlacesView: View {
                 }
             }
         }
-        .task({
+        .task {
             await viewState.fetchPlacesWithAsync()
-        })
+        }
         .sheet(isPresented: viewState.$showFavorites) {
             coordinator.showFavorites()
         }

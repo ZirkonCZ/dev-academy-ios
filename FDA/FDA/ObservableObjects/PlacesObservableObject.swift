@@ -23,13 +23,5 @@ final class PlacesObservableObject: ObservableObject {
         } catch {
             print("error during fetching data:\n", error)
         }
-//        DataService.shared.fetchData { result in
-//            switch result {
-//            case .success(let places):
-//                self.places = places.places
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
     }
 } 
