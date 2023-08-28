@@ -16,7 +16,7 @@ final class ObservableObjects {
 
 extension ObservableObjects {
     convenience init(services: Services) { // idk
-        let features = PlacesObservableObject()
+        let features = PlacesObservableObject(placesService: ProductionPlacesServices())
         
         self.init(
             features: features
