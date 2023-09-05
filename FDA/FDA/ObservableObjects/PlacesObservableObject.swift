@@ -7,21 +7,55 @@
 
 import SwiftUI
 
-
 final class PlacesObservableObject: ObservableObject {
+    @Published var places: [Place] = []
+    let placesService: PlacesService
+
     init(placesService: PlacesService) {
         self.placesService = placesService
     }
 
-    @Published var places: [Place] = []
-    let placesService: PlacesService
     
     @MainActor
     func fetch() async {
         do {
-            places = try await placesService.placesWithAsync().places
+            rawPlaces = try await placesService.placesWithAsync().places
         } catch {
             print("error during fetching data:\n", error)
         }
     }
-} 
+    
+    private var rawPlaces: [Place] = [] {
+        didSet { updatePlaces() }
+    }
+
+    private(set) var favouritePlaces: [Int]? {
+            get { UserDefaults.standard.array(forKey: "favourites") as? [Int] }
+            set { UserDefaults.standard.set(newValue, forKey: "favourites");
+                updatePlaces();
+            }
+        }
+    
+    private func updatePlaces() -> Void {
+        var nonfavPlaces: [Place] = []
+        var favPlaces: [Place] = []
+        
+        for place in rawPlaces {
+            if favouritePlaces != nil && favouritePlaces!.contains(place.properties.ogcFid) {
+                favPlaces.append(place)
+            } else {
+                nonfavPlaces.append(place)
+            }
+        }
+        self.places = favPlaces + nonfavPlaces
+    }
+
+    func set(place: Place, favourite addFav: Bool) -> Void {
+        if (addFav) {
+            places.append(place)
+        } else {
+            places.remove(at: favouritePlaces!.firstIndex(of: place.properties.ogcFid)!) // is it ok with these `!`?
+        }
+    }
+    
+}
