@@ -32,8 +32,8 @@ struct PlaceDetailViewState: DynamicProperty {
     var isFavourite: Binding<Bool> {
         .init {
             placesObject.favouritePlaces?.contains(place.properties.ogcFid) ?? false
-        } set: {
-            newValue in placesObject.set(place: self.place, favourite: newValue);
+        } set: { newValue in
+            placesObject.set(place: self.place, favourite: newValue);
         }
     }
     // why is this a legit syntax? I don't get it, what means `newValue in`, where newValue is a local var already in use in set(place, favourite) call

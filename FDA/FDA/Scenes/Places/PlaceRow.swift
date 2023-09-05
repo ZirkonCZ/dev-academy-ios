@@ -73,10 +73,10 @@ public class ImageStorage {
     func update(image: UIImage, at url: URL) {
         let imageHash: String = hash(of: url);
         let imageData: Data? = try? Data(contentsOf: defaultPath.appendingPathComponent(imageHash));
-        if let imageData: Data = imageData {
+        if imageData != nil {
             try? FileManager.default.removeItem(atPath: imageHash)
              guard let imageDataNew = image.jpegData(compressionQuality: 1.0) else { return }
-             try? Data().write(to: url)
+            try? imageDataNew.write(to: url)
         }
 
         // HINT: UIImage -> Data

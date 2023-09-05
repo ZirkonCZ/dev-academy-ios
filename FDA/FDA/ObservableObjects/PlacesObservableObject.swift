@@ -52,9 +52,9 @@ final class PlacesObservableObject: ObservableObject {
 
     func set(place: Place, favourite addFav: Bool) -> Void {
         if (addFav) {
-            places.append(place)
+            favouritePlaces!.append(place.properties.ogcFid)
         } else {
-            places.remove(at: favouritePlaces!.firstIndex(of: place.properties.ogcFid)!) // is it ok with these `!`?
+            favouritePlaces!.remove(at: favouritePlaces!.firstIndex(of: place.properties.ogcFid)!) // is it ok with these `!`?
         }
     }
     
